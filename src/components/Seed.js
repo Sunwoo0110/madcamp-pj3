@@ -2,7 +2,8 @@ import React from 'react'
 import { ItemTypes } from './Constants'
 import { useDrag } from 'react-dnd'
 
-export default function Seed(){
+export default function Seed(x, y){
+
     const [{isDragging}, drag] = useDrag(() => ({
         type: ItemTypes.SEED,
         collect: (monitor) => ({
@@ -18,6 +19,8 @@ export default function Seed(){
                 fontSize: 25,
                 fontWeight: 'bold',
                 cursor: 'move',
+                background: "transparent",
+                display: "inline-block"
             }}
         >
         🥑

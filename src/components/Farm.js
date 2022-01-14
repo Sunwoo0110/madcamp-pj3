@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function Farm({ brown, children }) {
-    const fill = brown ? 'brown' : 'green'
-    const stroke = brown? 'green' : 'brown'
+export default function Farm({ color, children }) {
+    const fill = ['white', 'green', 'brown', "gray"][color]
+    //const stroke = ['brown', 'green', 'red'][color]
     
     return (
         <div 
             style={{
                 backgroundColor: fill,
-                color: stroke,
+                //color: stroke,
                 width: '100%',
                 height: '100%'
             }}

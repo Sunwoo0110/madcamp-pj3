@@ -13,6 +13,21 @@
   }
 }
 
+.title_nav {
+  background: green;
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 20px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.main {
+  margin-left: 150px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

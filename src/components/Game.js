@@ -1,4 +1,4 @@
-let seedPostion = [0,0]
+let seedPostion = [7,0]
 let observer = null
 
 function emitChange(){
@@ -13,9 +13,15 @@ export function observe(o) {
     emitChange()
 }
 
-export function moveSeed(toX, toY){
+export function sowSeed(toX, toY) {
     seedPostion = [toX, toY]
-    emitChange()
+}
+
+export function moveSeed(toX, toY){
+    if(toX !== 4) {
+        seedPostion = [toX, toY]
+        emitChange()
+    } 
 }
 
 // 지금은 chess knight 조건, 추후 이미 씨앗이 있거나 작물 재배중일때로 변경하기~

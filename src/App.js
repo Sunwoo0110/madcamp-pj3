@@ -1,21 +1,21 @@
 import React from 'react';
 import EntireFarm from './components/EntireFarm';
+import './App.css';
 import Repo from './components/Repo';
 import {observe} from './components/Game'
 
-/*
-class App extends React.Component {
-  render(){
-    return (
-      <div>
-        <EntireFarm />
+function SplitPane(props) {
+  return (
+    <div className="SplitPane">
+      <div className="SplitPane-left">
+        {props.left}
       </div>
-    )
-  }
+      <div className="SplitPane-right">
+        {props.right}
+      </div>
+    </div>
+  )
 }
-*/
-
-
 
 class App extends React.Component {
 
@@ -26,13 +26,17 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <EntireFarm seedPosition={this.props.seedPosition} />
-        
-        
+        <div className="title_nav">
+          <div style={{color : 'white', fontSize : '30px'}}>Title</div>
+        </div>
+        <div className="main">
+          
+            <EntireFarm seedPosition={this.props.seedPosition} />  
+            
+        </div>
       </div>
     );
   }
 }
-
 
 export default App;
